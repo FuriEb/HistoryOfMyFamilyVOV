@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>История моей семьи в годы войны | Бессмертный подвиг</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #1e1b16; font-family: 'Roboto Slab', serif; color: #2c241a; line-height: 1.5; }
+        .bg-paper { background: #fef3e2; background-image: radial-gradient(circle at 25% 40%, rgba(180, 130, 80, 0.03) 2%, transparent 2.5%); background-size: 28px 28px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .hero { background: linear-gradient(120deg, #2f2a1f 0%, #1f1b12 100%); color: #efe6cf; padding: 3rem 0 2.5rem; text-align: center; border-bottom: 5px solid #bc9a6c; position: relative; overflow: hidden; }
+        .hero::before { content: "★"; font-size: 120px; position: absolute; bottom: -30px; right: 20px; opacity: 0.08; font-family: monospace; color: #e6c384; pointer-events: none; }
+        .hero h1 { font-size: 2.7rem; font-weight: 700; letter-spacing: 2px; text-shadow: 2px 2px 0 #3a2e1f; margin-bottom: 0.5rem; }
+        .hero .sub { font-size: 1.2rem; font-family: 'Cormorant Garamond', serif; font-style: italic; border-top: 1px solid #bc9a6c; display: inline-block; padding-top: 0.7rem; }
+        .ribbon { background: #b1452b; color: #ffefcf; display: inline-block; padding: 0.3rem 1rem; font-size: 0.8rem; font-weight: bold; letter-spacing: 1px; margin-top: 1.5rem; border-radius: 30px; }
+        .memorial-date { background: #2e2a22; color: #e9dbbc; text-align: center; padding: 0.6rem; font-size: 0.9rem; font-weight: 500; }
+        .memorial-date i { margin-right: 6px; }
+        section { margin: 3rem 0; }
+        .section-title { font-size: 2rem; font-weight: 700; border-left: 8px solid #b1624b; padding-left: 1.2rem; margin-bottom: 2rem; font-family: 'Cormorant Garamond', serif; color: #2c241a; }
+        .story-card { background: #fffcf5; border-radius: 24px; box-shadow: 0 20px 30px -15px rgba(0,0,0,0.2); overflow: hidden; margin-bottom: 2rem; display: flex; flex-wrap: wrap; transition: transform 0.2s ease; }
+        .story-card:hover { transform: translateY(-5px); }
+        .story-img { flex: 1.2; min-width: 220px; background: #cbc1ac; display: flex; align-items: center; justify-content: center; padding: 1rem; }
+        .story-img img { max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 15px -5px rgba(0,0,0,0.3); object-fit: cover; width: 100%; max-height: 320px; }
+        .story-text { flex: 2; padding: 1.8rem 2rem; }
+        .story-text h3 { font-size: 1.8rem; font-weight: 700; color: #9b4a32; margin-bottom: 0.5rem; }
+        .story-text .years { font-family: monospace; background: #e7dfcf; display: inline-block; padding: 0.2rem 1rem; border-radius: 40px; font-size: 0.8rem; font-weight: bold; margin-bottom: 1rem; }
+        .story-text p { font-size: 1.05rem; margin-bottom: 1rem; text-align: justify; }
+        .quote { font-style: italic; border-left: 3px solid #bc9a6c; padding-left: 1rem; margin: 1rem 0; color: #5e4c38; background: #f9efdf; padding: 0.8rem 1rem; border-radius: 12px; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.8rem; margin-top: 1.5rem; }
+        .gallery-item { background: #fef7ea; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 18px rgba(0,0,0,0.1); transition: all 0.3s; text-align: center; padding-bottom: 0.5rem; }
+        .gallery-item img { width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s; }
+        .gallery-item:hover img { transform: scale(1.02); }
+        .gallery-item p { display: none; }
+        .medals { background: #2c281f; color: #f2e5cf; padding: 2rem; border-radius: 40px; margin: 3rem 0; text-align: center; }
+        .medals h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+        .medal-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.8rem; margin-top: 1rem; }
+        .medal { background: #3e392c; border-radius: 60px; padding: 0.6rem 1.5rem; display: inline-flex; align-items: center; gap: 0.8rem; font-weight: bold; }
+        .medal i { font-size: 1.8rem; color: #e6bc7e; }
+        .tree { text-align: center; background: #e7ddca; border-radius: 48px; padding: 2rem; margin: 2rem 0; }
+        .tree p { font-size: 1.2rem; }
+        footer { background: #19150e; color: #cfc5ae; text-align: center; padding: 2rem; margin-top: 3rem; font-size: 0.85rem; border-top: 2px solid #7a5a3e; }
+        footer i { color: #b1624b; }
+        footer a { color: #e6c384; text-decoration: none; border-bottom: 1px dotted #bc9a6c; transition: color 0.2s; }
+        footer a:hover { color: #f5e2b0; border-bottom: 1px solid #f5e2b0; }
+        @media (max-width: 750px) {
+            .hero h1 { font-size: 1.8rem; }
+            .story-text h3 { font-size: 1.4rem; }
+            .story-text { padding: 1.2rem; }
+            .section-title { font-size: 1.6rem; }
+        }
+        .btn-memory { background: none; border: 2px solid #b1624b; padding: 0.4rem 1rem; border-radius: 30px; font-weight: bold; color: #b1624b; cursor: pointer; transition: 0.2s; margin-top: 0.5rem; font-family: inherit; }
+        .btn-memory:hover { background: #b1624b; color: #fff5e6; }
+        .memory-block { display: none; margin-top: 1rem; background: #fff0df; padding: 1rem; border-radius: 20px; }
+        .memory-block.show { display: block; }
+    </style>
+</head>
+<body class="bg-paper">
+    <div class="hero">
+        <div class="container">
+            <h1><i class="fas fa-star-of-life"></i> История моей семьи в годы войны <i class="fas fa-star-of-life"></i></h1>
+            <div class="sub">Память, которой не дано угаснуть</div>
+            <div class="ribbon"><i class="fas fa-tape"></i> 1941 — 1945 · Великая Отечественная война</div>
+        </div>
+    </div>
+    <div class="memorial-date">
+        <i class="fas fa-calendar-alt"></i> Вечная слава героям, живым и павшим. Помним каждого.
+    </div>
+
+    <main class="container">
+        <!-- Главная история: прадедушка Алексей -->
+        <section>
+            <div class="section-title"><i class="fas fa-feather-alt"></i> Семейная хроника</div>
+            <div class="story-card">
+                <div class="story-img">
+                    <!-- ФОТО 1: Прадед Алексей на фронте -->
+                    <img src="images/foto1.jpg" alt="Прадед Алексей на фронте, Сталинградская битва" loading="lazy">
+                </div>
+                <div class="story-text">
+                    <h3>Алексей Иванович Кравцов</h3>
+                    <div class="years">1918 — 1992 | гвардии сержант</div>
+                    <p>В 1941 году Алексей Иванович был призван в Красную Армию из небольшого села Подгорное. Участвовал в Сталинградской битве, был ранен, но вернулся в строй. В 1943 году освобождал Харьков, форсировал Днепр. За мужество награждён медалью «За отвагу» и Орденом Красной Звезды. Победу встретил в Берлине, расписался на стене Рейхстага. После войны работал учителем истории и всегда говорил: «Война — это боль, но мы победили ради жизни». </p>
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i> «Я помню, как мы стояли насмерть у Мамаева кургана. Каждый день молил только об одном — чтобы дети никогда не видели ужасов войны.»
+                    </div>
+                    <button class="btn-memory" id="btnMemory">📜 Прочитать воспоминание из письма</button>
+                    <div id="memoryText" class="memory-block">
+                        <strong>Из фронтового письма, 1944 год:</strong><br>
+                        «Здравствуй, моя родная! Пишу под аккорды канонады. Мы отвоевали ещё одну высоту. Вчера хоронили товарища Колю, но мы не сломлены. Береги детей, Люба. Скоро вернусь с Победой. Целую, твой Алексей.»<br>
+                        <span style="font-size:0.8rem;">✉️ Письмо хранится в семейном архиве.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- История прабабушки Анны у станка -->
+        <section>
+            <div class="story-card" style="flex-direction: row-reverse; flex-wrap: wrap;">
+                <div class="story-img">
+                    <!-- ФОТО 2: Прабабушка Анна у станка -->
+                    <img src="images/foto2.jpg" alt="Прабабушка Анна у станка, завод">
+                </div>
+                <div class="story-text">
+                    <h3>Анна Михайловна Кравцова</h3>
+                    <div class="years">1921 — 2004 | труженица тыла</div>
+                    <p>Когда началась война, Анне Михайловне было 20 лет. Её муж ушёл на фронт, а она осталась с двумя маленькими детьми. Днём работала на заводе по выпуску снарядов, ночами — в госпитале медсестрой. Несмотря на голод и холод, она сохранила веру в Победу. Награждена медалью «За доблестный труд в Великой Отечественной войне». Её история — это история миллионов женщин, которые выстояли и приближали Победу в тылу.</p>
+                    <div class="quote">
+                        <i class="fas fa-hands-helping"></i> «Хлеб делили на крошки, но поддерживали друг друга. Соседка тётя Катя отдала последнюю картошку детям, сама ослабла... Мы выжили благодаря единству.»
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Дети войны - история бабушки -->
+        <section>
+            <div class="section-title"><i class="fas fa-child"></i> Дети войны · Воспоминания бабушки</div>
+            <div class="story-card">
+                <div class="story-img">
+                    <!-- ФОТО 3: Детство в эвакуации -->
+                    <img src="images/foto3.jpg" alt="Детство в эвакуации, дети войны">
+                </div>
+                <div class="story-text">
+                    <h3>Зинаида Алексеевна (1938 г.р.)</h3>
+                    <div class="years">ребёнок войны, блокадница (эвакуирована)</div>
+                    <p>Зинаиде было всего 3 года, когда началась война. Семью эвакуировали в Свердловскую область. Её детство прошло в землянке, вместо игрушек — гильзы от патронов. Позже она рассказывала: «Мы не знали шоколада, зато помнили запах лепёшек из лебеды. Но даже в те годы взрослые старались создать праздник, читали нам книги при коптилке». В 1945 году, когда объявили о Победе, она выбежала на улицу и плакала от счастья, сама не понимая почему. Сейчас бабушке 86 лет, она передаёт память внукам и правнукам.</p>
+                    <div class="quote">
+                        <i class="fas fa-dove"></i> «Мы ждали отцов с фронта. Каждый день молились. И верили: враг будет разбит. Победа стала для нас светлым днём, который не затмит никто.»
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Награды и реликвии -->
+        <div class="medals">
+            <h3><i class="fas fa-medal"></i> Семейные награды и реликвии</h3>
+            <div class="medal-list">
+                <div class="medal"><i class="fas fa-star-of-life"></i> Орден Красной Звезды</div>
+                <div class="medal"><i class="fas fa-shield-alt"></i> Медаль «За отвагу»</div>
+                <div class="medal"><i class="fas fa-tools"></i> Медаль «За доблестный труд»</div>
+                <div class="medal"><i class="fas fa-envelope"></i> Полевые письма (1942-1945)</div>
+            </div>
+            <p style="margin-top: 1rem;">⭐ Награды хранятся в семейном музее, ежегодно участвуют в акции «Бессмертный полк».</p>
+        </div>
+
+        <!-- Фотогалерея военного времени (4 фото) -->
+        <section>
+            <div class="section-title"><i class="fas fa-images"></i> Фотографии военных лет</div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <!-- ФОТО 4: Освобождение Харькова -->
+                    <img src="images/foto4.jpg" alt="Освобождение Харькова 1943">
+                </div>
+                <div class="gallery-item">
+                    <!-- ФОТО 5: Завод в тылу (дополнительное) -->
+                    <img src="images/foto5.jpg" alt="Завод в тылу">
+                </div>
+                <div class="gallery-item">
+                    <!-- ФОТО 6: Письма с фронта -->
+                    <img src="images/foto6.jpg" alt="Письма с фронта">
+                </div>
+                <div class="gallery-item">
+                    <!-- ФОТО 7: День Победы 1945 -->
+                    <img src="images/foto7.jpg" alt="День Победы 1945">
+                </div>
+            </div>
+        </section>
+
+        <div class="tree">
+            <i class="fas fa-tree" style="font-size: 2.5rem; color:#7a5a3e;"></i>
+            <h3 style="margin: 0.5rem 0;">🌳 Родословная в годы войны</h3>
+            <p>Иван Кравцов (погиб под Ржевом) — Алексей Кравцов (ветеран) — Зинаида Кравцова (ребёнок войны) — и более 12 родственников, трудившихся в тылу и на передовой.<br>
+            <strong>Мы помним каждого, кто отстоял мир!</strong></p>
+        </div>
+
+        <section style="background: #f2e8da; border-radius: 32px; padding: 1.5rem; text-align: center;">
+            <i class="fas fa-candle" style="font-size: 2rem; color:#b1624b;"></i>
+            <h3>Минута молчания — вечная память</h3>
+            <p id="poem" style="font-style: italic; margin: 1rem 0;">Пусть поколения знают, какой ценой завоевано счастье.<br> 
+            Склоняем головы перед мужеством солдат и тружеников тыла.<br>
+            <strong>Никто не забыт, ничто не забыто.</strong></p>
+            <button id="memoryBell" class="btn-memory" style="background:#b1624b; color:white; border:none;"><i class="fas fa-bell"></i> Зажечь свечу памяти</button>
+            <div id="candleLight" style="margin-top: 1rem; font-size: 1.8rem; display: none;">🕯️ Вечная слава героям семьи 🕯️</div>
+        </section>
+
+        <section>
+            <div class="section-title"><i class="fas fa-hand-holding-heart"></i> Наша благодарность</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between;">
+                <div style="flex:1; background:#e5d8c2; border-radius: 28px; padding: 1.5rem;">
+                    <i class="fas fa-school" style="font-size: 2rem;"></i>
+                    <h4 style="margin: 0.5rem 0;">Школьный музей</h4>
+                    <p>Материалы о нашей семье переданы в музей боевой славы школы №15. Ежегодно проходят уроки мужества с участием потомков.</p>
+                </div>
+                <div style="flex:1; background:#e5d8c2; border-radius: 28px; padding: 1.5rem;">
+                    <i class="fas fa-users" style="font-size: 2rem;"></i>
+                    <h4 style="margin: 0.5rem 0;">Бессмертный полк онлайн</h4>
+                    <p>Каждый год 9 мая мы проносим портреты Алексея Кравцова и Анны Кравцовой в рядах Бессмертного полка. Имя деда — в базе «Память народа».</p>
+                </div>
+                <div style="flex:1; background:#e5d8c2; border-radius: 28px; padding: 1.5rem;">
+                    <i class="fas fa-book-open" style="font-size: 2rem;"></i>
+                    <h4 style="margin: 0.5rem 0;">Книга памяти</h4>
+                    <p>В 2020 году вышла книга «Солдаты Победы: семейные хроники», где напечатан очерк о династии Кравцовых.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <i class="fas fa-infinity"></i> Помним. Гордимся. Наследуем. <br>
+        Сайт «<a href="#" id="siteNameLink">История моей семьи в годы войны</a>» создан в память о предках — героях фронта и тыла. <br>
+        © 2025 Семейный архив
+    </footer>
+
+    <script>
+        const btn = document.getElementById('btnMemory');
+        const memoryDiv = document.getElementById('memoryText');
+        if(btn && memoryDiv) {
+            btn.addEventListener('click', function() {
+                memoryDiv.classList.toggle('show');
+                btn.innerHTML = memoryDiv.classList.contains('show') ? '📖 Скрыть письмо' : '📜 Прочитать воспоминание из письма';
+            });
+        }
+        const bellBtn = document.getElementById('memoryBell');
+        const candleDiv = document.getElementById('candleLight');
+        if(bellBtn && candleDiv) {
+            bellBtn.addEventListener('click', function() {
+                if(candleDiv.style.display === 'none' || candleDiv.style.display === '') {
+                    candleDiv.style.display = 'block';
+                    bellBtn.innerHTML = '<i class="fas fa-fire"></i> Память горит вечно';
+                } else {
+                    candleDiv.style.display = 'none';
+                    bellBtn.innerHTML = '<i class="fas fa-bell"></i> Зажечь свечу памяти';
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            if(memoryDiv) memoryDiv.classList.remove('show');
+            if(candleDiv) candleDiv.style.display = 'none';
+            const treeBlock = document.querySelector('.tree');
+            if(treeBlock) {
+                treeBlock.style.cursor = 'pointer';
+                treeBlock.addEventListener('click', () => alert('🌿 В семейном древе более 20 имён. Каждый внёс вклад в Победу!'));
+            }
+            const siteLink = document.getElementById('siteNameLink');
+            if(siteLink) {
+                siteLink.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+            }
+        });
+    </script>
+</body>
+</html>
